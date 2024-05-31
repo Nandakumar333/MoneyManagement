@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyManagement.MainPage">
+
+    <Grid RowDefinitions="Auto, *">
+        <!-- Navigation Drawer -->
+        <Grid BackgroundColor="LightGray">
+            <StackLayout>
+                <Button Text="Home" Clicked="HomeButton_Clicked" />
+                <Button Text="Transactions" Clicked="TransactionsButton_Clicked" />
+                <Button Text="Categories" Clicked="CategoriesButton_Clicked" />
+                <Button Text="Budget" Clicked="BudgetButton_Clicked" />
+                <Button Text="Settings" Clicked="SettingsButton_Clicked" />
+            </StackLayout>
+        </Grid>
+
+        <!-- Main Content Area -->
+        <Frame Grid.Row="1">
+            <!-- Content of the selected page will be loaded here -->
+            <ContentView x:Name="ContentPage" />
+        </Frame>
+    </Grid>
+    
+</ContentPage>

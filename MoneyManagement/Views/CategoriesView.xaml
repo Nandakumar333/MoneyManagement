@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MoneyManagement.Views.CategoriesView"
+             Title="CategoriesView">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Categories" FontSize="Large" HorizontalOptions="Center" Margin="0,20,0,10" />
+
+            <!-- Placeholder for displaying categories -->
+            <StackLayout x:Name="CategoriesContainer">
+                <!-- Categories will be added dynamically here -->
+            </StackLayout>
+
+            <!-- Button to add a new category -->
+            <Button Text="Add Category" Clicked="AddCategoryButton_Clicked" HorizontalOptions="FillAndExpand" Margin="0,20,0,0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

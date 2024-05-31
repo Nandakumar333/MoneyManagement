@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MoneyManagement.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MoneyManagement"
+    xmlns:views="clr-namespace:MoneyManagement.Views"    
+    Shell.FlyoutBehavior="{OnIdiom Phone=Flyout, Default=Locked}"
+    Title="MoneyManagement">
+
+    <FlyoutItem Title="Home">
+        <Tab Title="Home">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate views:HomeView}"
+                Route="HomeView" />
+        </Tab>
+        <Tab Title="Budget">
+            <ShellContent
+            Title="Budget"
+            ContentTemplate="{DataTemplate views:BudgetView}"
+            Route="BudgetView" />
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="Transactions">
+        <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Route="MainPage" />-->
+        <ShellContent
+        Title="Transactions"
+        ContentTemplate="{DataTemplate views:TransactionsView}"
+        Route="TransactionsView" />
+    </FlyoutItem>
+    <FlyoutItem Title="Categories">
+    <ShellContent
+        Title="Categories"
+        ContentTemplate="{DataTemplate views:CategoriesView}"
+        Route="CategoriesView" />
+    </FlyoutItem>
+    <FlyoutItem Title="Budget">
+        <ShellContent
+        Title="Budget"
+        ContentTemplate="{DataTemplate views:BudgetView}"
+        Route="BudgetView" />
+    </FlyoutItem>
+    <FlyoutItem Title="Settings">
+        <ShellContent
+        Title="Settings"
+        ContentTemplate="{DataTemplate views:SettingsView}"
+        Route="SettingsView" />
+    </FlyoutItem>
+
+</Shell>
